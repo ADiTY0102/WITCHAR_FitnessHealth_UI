@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main-two h4,h6{
+    color: #222831;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.main-two pre {
+    color: #31363F;
+        font-family: "Libre Caslon Display", serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+}
+
+.main-two .p-one{
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 300;
+        opacity: 0.7;
+        font-style: normal;
+}
+
+.navbar-onee{
+    width: 100%;
+}
+
+.main-two{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sleep-two img{
+    margin-bottom: 300px;
+}
+

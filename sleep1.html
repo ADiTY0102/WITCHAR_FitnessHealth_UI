@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Sleep Management</title>
+</head>
+
+<body>
+    <!--Carousal-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active my-4">
+                <img class="d-block w-100" src="sleep-hub.webp" alt="First slide" height="300px">
+            </div>
+        </div>
+    </div>
+    <section class="section-one">
+        <div class="container">
+            <div class="left-side">
+                <div class="title">
+                    <h1>Reday to
+                        <img src="Images/star.png" alt="" class="star">
+                        <br> Keep track<br> on your Sleep?
+                    </h1>
+                </div>
+
+                <p class="p">
+                    Hello peoples..! We are Arogya Developers and we are here to fix your sleep schedule<br>
+                    so let's get start Exploring things scroll down!!!
+                </p>
+            </div>
+            <div class="right-side pyramid">
+                <img src="sleep-1.webp" alt="" class="gold glow image" style="height: 500px; border-radius: 0px;">
+            </div>
+        </div>
+    </section>
+    <!--Bootstrap-->
+    <div class="container my-4">
+        <!--1st-->
+        <div class="row featurette d-flex justify-content-center align-items-center my-4">
+            <div class="col-md-7">
+                <h2 class="featurette-heading" style="color: black;">Unlock the Secrets <span class="text-muted">of Your
+                        Sleep with Sleep Track</span></h2>
+                <p class="lead">Are you tired of tossing and turning at night, unable to achieve a restful slumber?
+                    Look no further! SleepTrackers.com is<br>
+                    here to revolutionize the way you approach your sleep health.
+                    We understand the importance of quality sleep in maintaining overall<br>
+                    well-being, and that's why we offer cutting-edge sleep tracking solutions
+                    to help you understand and optimize your sleep
+                    patterns.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                    src="sleep-schedule.webp" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            </div>
+        </div>
+        <div class="line"></div>
+        <br>
+        <!--2nd-->
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                    src="sleepzone.png" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            </div>
+            <div class="col-md-7">
+                <h2 class="featurette-heading" style="color: rgb(154, 13, 241);">What is Sleep Tracking? <span
+                        class="text-muted">It'll blow your
+                        mind.</span></h2>
+                <p class="lead">
+                    Sleep tracking involves monitoring various aspects of your sleep, such as
+                    duration, quality, and stages, using <br>
+                    advanced technology. With the help of wearable devices, mobile apps, and
+                    other gadgets, you can gain valuable insights<br>
+                    into your nightly sleep habits, allowing you to make informed decisions
+                    to improve your sleep quality.
+                </p>
+            </div>
+
+        </div>
+        <!--3rd-->
+        <br>
+        <div class="line"></div>
+        <div class="row featurette d-flex justify-content-center align-items-center my-4">
+            <div class="col-md-7">
+                <span>
+                    <h2 class="featurette-heading" style="color: rgba(158, 6, 234, 0.486);">The Basics of a Good Night's
+                        Sleep
+                </span></h2>
+                <p class="lead">
+                    While sleep tracking devices can provide valuable insights, relying
+                    too heavily on technology to regulate sleep can
+                    lead to dependency and anxiety surrounding sleep.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                    src="mmm-removebg-preview.png" data-holder-rendered="true" style="width: 500px; height: 500px;">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+
+        gsap.from('.logo div', {
+            opacity: 0,
+            delay: 1,
+            x: 20
+        })
+
+        const menu_items = document.querySelector('.menu-items')
+        gsap.from(menu_items.children, {
+            opacity: 0,
+            x: 0,
+            duration: 1,
+            delay: 1.5,
+            stagger: {
+                amount: 1
+            }
+        })
+
+
+        gsap.utils.toArray('.star').forEach(star => {
+            gsap.fromTo(star, {
+                rotation: 450,
+                opacity: 0,
+                y: 100
+            }, {
+                rotation: 0,
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                delay: 1.5,
+                scrollTrigger: star
+            })
+        })
+
+
+        gsap.utils.toArray('.title').forEach(title => {
+            gsap.fromTo(title, {
+                letterSpacing: '10px',
+                opacity: 0,
+                x: 300,
+                skewX: 65
+            },
+
+                {
+                    letterSpacing: '0',
+                    opacity: 1,
+                    x: 0,
+                    skewX: 0,
+                    duration: 1,
+                    delay: .5,
+                    scrollTrigger: title
+                })
+        })
+
+        gsap.utils.toArray('p').forEach(p => {
+            gsap.fromTo(p, {
+                opacity: 0,
+                x: 150,
+                skewX: 30
+            }, {
+                opacity: 1,
+                x: 0,
+                skewX: 0,
+                duration: 1,
+                delay: .5,
+                scrollTrigger: p
+
+            })
+        })
+
+        gsap.utils.toArray('button').forEach(button => {
+            gsap.fromTo(button, {
+                opacity: 0,
+            }, {
+                opacity: 1,
+                duration: 1,
+                delay: 1,
+                scrollTrigger: button
+
+            })
+        })
+
+
+        gsap.from('.pyramid', {
+            opacity: 0,
+            scale: .5,
+            duration: 1,
+            delay: .5
+        })
+
+        gsap.fromTo('.hand', {
+            scale: .2,
+            opacity: 0,
+            skewY: 30
+        }, {
+            scale: 1,
+            opacity: 1,
+            skewY: 0,
+            duration: 1,
+            delay: .5,
+            scrollTrigger: '.hand'
+        })
+
+
+
+        gsap.utils.toArray('.line').forEach(line => {
+            gsap.fromTo(line, {
+                opacity: 0,
+                width: '0%'
+            }, {
+                opacity: 1,
+                width: '100%',
+                duration: 1,
+                delay: 1,
+                scrollTrigger: line
+
+            })
+        })
+
+
+        gsap.utils.toArray('.rotation').forEach(rotate => {
+            gsap.fromTo(rotate, {
+                opacity: 0,
+                rotation: 350,
+                scale: .2
+            }, {
+                opacity: 1,
+                rotation: 0,
+                scale: 1,
+                duration: 1,
+                delay: 1,
+                scrollTrigger: rotate
+
+            })
+        })
+
+
+        gsap.fromTo('.card', {
+            opacity: 0,
+            scale: .1,
+        }, {
+            opacity: 1,
+            scale: 1,
+            duration: 1,
+            delay: .5,
+            stagger: {
+                amount: 1
+            },
+            scrollTrigger: '.card'
+        })
+
+        const menu = document.querySelector('.menu')
+
+
+        gsap.from(menu.children, {
+            opacity: 0,
+            x: 50,
+            duration: 1,
+            delay: .5,
+            stagger: {
+                amount: 1
+            },
+            scrollTrigger: {
+                trigger: menu.children
+            }
+        })
+    </script>
+</body>
+
+</html>
